@@ -12,10 +12,8 @@ class TodoItemController extends Controller
      */
     public function index()
     {
-
         $todoItems = TodoItem::where('status', 0)->get();
-
-        return view("TodoIndex", compact('todoItems'));
+        return response()->json($todoItems);
     }
 
     /**
@@ -55,14 +53,7 @@ class TodoItemController extends Controller
      */
     public function update(Request $request, TodoItem $todoItem)
     {
-
-        // $request->validate([
-        //     'Status' => 'required|in:0,1',
-        // ]);
-
         $todoItem->update(['Status' => $request->Status]);
-
-
     }
 
     /**
