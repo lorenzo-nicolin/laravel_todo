@@ -8,5 +8,6 @@ Route::get('/', function () {
 });
 
 Route::get('/todoindex', [TodoItemController::class, 'index']);
+Route::put('/todoitems/{todoItem}', [TodoItemController::class, 'update'])->name("update");
 
 

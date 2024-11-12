@@ -24,8 +24,8 @@ class TodoItemFactory extends Factory
     public function definition()
     {
         return [
-            'itemName' => $this->faker->sentence(),
-            'Status' => 0,
+            'itemName' => $this->faker->sentence()
+
         ];
     }
 }

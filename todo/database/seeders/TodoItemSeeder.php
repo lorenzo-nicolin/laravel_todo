@@ -20,12 +20,9 @@ class TodoItemSeeder extends Seeder
     {
         // Create 10 TodoItems with status 0 (pending)
         TodoItem::factory(10)->create([
-            'status' => 0,
+            'Status' => 0,
         ]);
 
-        // Create 5 TodoItems with status 1 (completed)
-        TodoItem::factory(5)->create([
-            'status' => 1,
-        ]);
+
     }
 }

@@ -11,4 +11,6 @@ class TodoItem extends Model
 
     use HasFactory;
 
+    protected $fillable = ['Status'];
+
 }
