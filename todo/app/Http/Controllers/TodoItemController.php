@@ -53,7 +53,10 @@ class TodoItemController extends Controller
      */
     public function update(Request $request, TodoItem $todoItem)
     {
-        $todoItem->update(['Status' => $request->Status]);
+        $todoItem->Status = 1;
+        $todoItem->save();
+
+        return response()->json($todoItem);
     }
 
     /**
