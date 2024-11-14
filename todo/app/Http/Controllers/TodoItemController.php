@@ -30,6 +30,16 @@ class TodoItemController extends Controller
     public function store(Request $request)
     {
         //
+
+        $todoitem = new TodoItem();
+
+        $todoitem->itemName = $request->input('todosadd');
+        $todoitem->Status = 0;
+
+
+        $todoitem->save();
+
+
     }
 
     /**

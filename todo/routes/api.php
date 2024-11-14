@@ -12,3 +12,4 @@ Route::get('/user', function (Request $request) {
 Route::get('/todoindex', [TodoItemController::class, 'index']);
 
 Route::put('/todoitems/{todoItem}', [TodoItemController::class, 'update'])->name("update");
+Route::post('/todoitems', [TodoItemController::class, 'store'])->name("store");
